@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Database, Gauge, LineChart, ShieldCheck } from "lucide-react";
 import { homeStats, siteConfig } from "@/data/site";
+import { withBasePath } from "@/lib/utils";
 
 const labMarkers = [
   { icon: LineChart, label: "Match notes into metrics" },
@@ -62,7 +63,7 @@ export function Hero() {
           <div className="absolute -inset-4 rounded-lg border border-signal-cyan/10 bg-signal-cyan/[0.03] blur-2xl" />
           <div className="relative overflow-hidden rounded-lg border border-white/10 bg-carbon-900 shadow-violet-glow">
             <Image
-              src="/images/beyondbotz-research-hero.png"
+              src={withBasePath("/images/beyondbotz-research-hero.png")}
               alt="Dark robotics research workspace with analytics screens and autonomous trajectory visuals."
               width={1536}
               height={864}

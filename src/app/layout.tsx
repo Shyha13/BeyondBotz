@@ -79,7 +79,7 @@ export default function RootLayout({
       "@type": "Person",
       name: siteConfig.founder
     },
-    sameAs: ["https://github.com/Shyha13/beyondbots"],
+    sameAs: ["https://github.com/Shyha13/BeyondBotz"],
     about: [
       "FTC match analysis",
       "Autonomous benchmarking",

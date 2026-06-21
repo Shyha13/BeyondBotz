@@ -84,6 +84,31 @@ pnpm build
 
 No database, authentication, paid APIs, or server-only services are required.
 
+## GitHub Pages Deployment
+
+The repository includes a GitHub Actions workflow at `.github/workflows/pages.yml` that builds a static export and deploys the `out` folder to GitHub Pages.
+
+To enable it:
+
+1. Open the repository on GitHub.
+2. Go to **Settings** > **Pages**.
+3. Under **Build and deployment**, set **Source** to **GitHub Actions**.
+4. Push to `main` or run the **Deploy GitHub Pages** workflow manually from the **Actions** tab.
+
+For the temporary GitHub Pages URL, the workflow sets:
+
+```text
+NEXT_PUBLIC_BASE_PATH=/BeyondBotz
+```
+
+That makes the site work at:
+
+```text
+https://shyha13.github.io/BeyondBotz/
+```
+
+When `beyondbotz.com` is connected to GitHub Pages later, remove the `NEXT_PUBLIC_BASE_PATH` line from `.github/workflows/pages.yml` so links and assets resolve from the domain root.
+
 ## Connecting beyondbotz.com
 
 1. In Vercel, open the deployed project.
